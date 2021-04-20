@@ -27,6 +27,7 @@ export function Welcome() {
         Gerencie {'\n'}
         suas plantas de {'\n'}
         forma fácil
+        Ajuste no git
       </Text>
 
       <Image 
