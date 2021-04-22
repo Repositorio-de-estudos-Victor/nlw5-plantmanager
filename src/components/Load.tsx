@@ -13,7 +13,7 @@ export function Load() {
     <View style={styles.container}>
       <LottieView 
         source={loadAnimation}
-        autoplay={true}
+        autoPlay
         loop
         style={styles.animation}
       />

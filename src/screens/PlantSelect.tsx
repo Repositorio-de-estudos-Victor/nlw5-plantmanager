@@ -60,7 +60,7 @@ export function PlantSelect() {
   }
 
   async function fetchPlants() {
-    const { data } = await api.get(`plants?_sort=name&_order=asc_page=${page}&_limit=8`)
+    const { data } = await api.get(`plants?_sort=name&_order=asc&_page=${page}&_limit=8`)
 
     if(!data) {
       return setLoading(true);
@@ -69,9 +69,9 @@ export function PlantSelect() {
     if(page > 1) {
       setPlants(oldValue => [...oldValue, ...data])
       setFilteredPlants(oldValue => [...oldValue, ...data])
-    }else {
+    } else {
       setPlants(data);
-    setFilteredPlants(data);
+      setFilteredPlants(data);
     }
     
     setLoading(false);
